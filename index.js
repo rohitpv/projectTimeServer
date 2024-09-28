@@ -6,7 +6,7 @@ const cors=require('cors')
 const app = express();
 var gDataStore = {};
 // module.exports = { gDataStore };
-module.exports.handler = async (event, context) => {
+exports.handler = async (event, context) => {
   return gDataStore;
 };
 dayjs.extend(utc);
