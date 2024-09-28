@@ -1,4 +1,4 @@
-var { gDataStore } = require("../index");
+var { gDataStore } = require("../gDataStore");
 
 
 var { dayjs, utc, timezone, connection } = require("../db")
