@@ -6,12 +6,12 @@ const cors=require('cors')
 const app = express();
 
 // ************
-const { gDataStore } = require('./gDataStore'); // Import your gDataStore
+// const { gDataStore } = require('./gDataStore'); // Import your gDataStore
 
-exports.handler = async (req, res) => {
-  // Your Lambda or Vercel handler logic here
-  res.status(200).json({ message: 'Success', data: gDataStore });
-};
+// exports.handler = async (req, res) => {
+//   // Your Lambda or Vercel handler logic here
+//   res.status(200).json({ message: 'Success', data: gDataStore });
+// };
 
 // ************
 
