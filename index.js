@@ -5,10 +5,15 @@ const cors=require('cors')
 
 const app = express();
 var gDataStore = {};
-// module.exports = { gDataStore };
-exports.handler = async (event, context) => {
-  return gDataStore;
+
+exports.gDataStore = gDataStore; // Export gDataStore explicitly
+exports.handler = async (event) => {
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: "Success", data: gDataStore }),
+  };
 };
+
 dayjs.extend(utc);
 
 app.use(cors({
