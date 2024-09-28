@@ -4,15 +4,16 @@ const utc = require("dayjs/plugin/utc");
 const cors=require('cors')
 
 const app = express();
-var gDataStore = {};
 
-exports.gDataStore = gDataStore; // Export gDataStore explicitly
-exports.handler = async (event) => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ message: "Success", data: gDataStore }),
-  };
+// ************
+const { gDataStore } = require('./gDataStore'); // Import your gDataStore
+
+exports.handler = async (req, res) => {
+  // Your Lambda or Vercel handler logic here
+  res.status(200).json({ message: 'Success', data: gDataStore });
 };
+
+// ************
 
 dayjs.extend(utc);
 
