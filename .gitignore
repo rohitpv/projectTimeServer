@@ -1,0 +1,17 @@
+# WebStorm metadata folder
+.idea
+
+.vscode 
+
+# MacOS Temp Files
+.DS_Store
+
+ 
+
+# Node_Module directory
+*node_module*
+
+ 
+
+# All Log Files
+*.log
