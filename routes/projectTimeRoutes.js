@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-var { gDataStore } = require("../index");
+var { gDataStore } = require("../gDataStore");
 const uniqid = require("uniqid");
 let validationMiddleware = require("../middleware/validationMiddleware");
 
