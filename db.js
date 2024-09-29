@@ -6,11 +6,10 @@ dayjs.extend(timezone)
 const mysql = require("mysql2");
 const connection = mysql.createPool({
   connectionLimit: 10,
-  // host: "192.168.121.6",
-  host: "sql.freedb.tech",
-  user: "freedb_rohit",
-  password: "$G8pt!6av&XRyx&",
-  database: "freedb_holidaydb",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
   port: 3306,
 });
 
